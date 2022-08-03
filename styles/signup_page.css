@@ -1,0 +1,97 @@
+#img-container{
+    display: flex;
+    height:100vh;
+    width:50vw;
+    background-color: #F3F5F9;
+    justify-content: center;
+}
+
+#img-container img{
+    height:30rem;
+    width: 30rem;
+    margin-top: 15rem;
+}
+#parent-container{
+    display: flex;
+    flex-direction: row;
+
+}
+#form-box-container{
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+#formbox{
+    width: 30vw;
+    height:40vh;
+   
+    margin-left: 10vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#form-heading{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text]{
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 20vw;
+    padding:0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+}
+label{
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    font-size: 1.75rem;
+    color:#633EBA;
+    margin-right: 0.5vw;
+}
+input[type=submit]{
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color:white;
+    background-color: #633EBA;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 5vh;
+    width: 8vw;
+    height:4vh;
+    font-weight: bold;
+}
+#signinlink{
+    margin-top: 14vh;
+    text-align: center;
+}
+h2{
+    font-size: 3rem;
+    color: #633EBA;
+    margin-bottom: 5vh;
+}
+#name{
+    margin-left: 2.25vw;
+}
+#branch{
+    margin-left:1.5vw;
+}
+#role{
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 20vw;
+    padding:0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    margin-left: 3vw;
+}
+p{
+    color:gray;
+}
