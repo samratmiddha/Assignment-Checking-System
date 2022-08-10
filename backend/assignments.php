@@ -34,4 +34,3 @@ $sql->bind_param("sssis",$this->assignment_name,$this->assignment_desc,$this->as
  }
    
 }
-    ?>

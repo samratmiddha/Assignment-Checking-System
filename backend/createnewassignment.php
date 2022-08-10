@@ -19,4 +19,3 @@ function test_input($data) {
 $assignment1= new assignments($name,$desc,$isfor,$date);
 
 header('Locataion: ../frontend/reviewerdashboard.php');
-?>

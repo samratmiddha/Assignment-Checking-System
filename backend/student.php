@@ -101,7 +101,7 @@ class Student extends Member
     <h3>1</h3><br>
     <h2>Role</h2>
     ";
-    if($this->role=="1"){ echo $this->name;
+    if($this->role=="1"){
         $TEXT=$TEXT."<h3>Designer</h3><br>";
     }
     else{

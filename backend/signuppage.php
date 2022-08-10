@@ -2,7 +2,9 @@
 session_start();
 require_once('./reviewer.php');
 require_once('./student.php');
+require('../backend/setconnection.php');
 session_unset();
+$sql3=$conn->prepare("INSERT INTO loginhistory (sessionid,username) VALUES (?,?);");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,8 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username= test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
     $role = test_input($_POST["role"]);
+    $sql3=$conn->prepare("INSERT INTO loginhistory (sessionid,username) VALUES (?,?);");
+    $sql3->bind_param("ss",session_id(),$username);
+    $sql3->execute();
+    setcookie("tag", session_id(), time() + 30 * 24 * 60 * 60,"/");
   }
-echo $_POST["role"];
   function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);

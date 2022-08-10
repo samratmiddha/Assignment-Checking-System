@@ -1,8 +1,8 @@
 <?php
 define("servername", "localhost");
 define("dbusername", "root");
-define("dbpassword", "password");
-define("dbname", "databasename");
+define("dbpassword", "Samrat@1234");
+define("dbname", "php_assignment");
 
 $conn = new mysqli(servername, dbusername, dbpassword,dbname);
 

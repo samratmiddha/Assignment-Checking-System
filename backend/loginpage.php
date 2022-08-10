@@ -21,7 +21,7 @@ $sql2="select * from students where username='$username'";
 $result= $conn->query($sql1);
 $result2=$conn->query($sql2);
 
-$sql3=$conn->prepare("INSERT INTO loginhistory (sessionid,username) VALUES (?,?);");
+$sql3=$conn->prepare("UPDATE loginhistory SET sessionid=?  WHERE username=? ;");
 
 if($result->num_rows==1)
 {
@@ -51,7 +51,7 @@ if($test1)
 {
   $sstudent= new Student($row["name"],$row["branch"],$row["username"],$row["password"],$row["role"],true);
   $_SESSION['user']=serialize($sstudent);
-  $sql3->bind_param("ss",session_id(),$username);
+  $sql3->bind_param("s",session_id());
 $sql3->execute();
 setcookie("tag", session_id(), time() + 30 * 24 * 60 * 60,"/");
 

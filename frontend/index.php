@@ -15,7 +15,7 @@ header('Location: ../frontend/studentdashboard.php');
 else{
     if(isset($_COOKIE['tag'])){
         require('../backend/setconnection.php');
-        $sqlforlogindirect="SELECT * FROM loginhistory WHERE sessionid=".$_COOKIE['tag'];
+        $sqlforlogindirect="SELECT * FROM loginhistory WHERE sessionid='".$_COOKIE['tag']."'";
         $result=$conn->query($sqlforlogindirect);
         $row=$result->fetch_assoc();
         $username=$row['username'];
